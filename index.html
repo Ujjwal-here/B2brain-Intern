@@ -29,7 +29,7 @@
           <!-- START OF DASHBOARD -->
           <div>
             <img src="images/home.png" alt="dashboard" />
-            <span>Dashboard</span>
+            <span id="dash">Dashboard</span>
           </div>
           <!-- END OF DASHBOARD -->
 
@@ -61,7 +61,7 @@
               <hr
                 id="toggle-barAcc"
                 class="dropdownBar"
-                style="color: rgba(219, 224, 232, 1)"
+                style="background-color: rgba(219, 224, 232, 1); border: 0.5px solid rgba(219, 224, 232, 1) ;"
               />
               <div id="toggle-elementsAcc" class="dropdownElements">
                 <p class="dropdownItems">Manage All</p>
@@ -85,7 +85,7 @@
               <hr
                 id="toggle-barPref"
                 class="dropdownBar"
-                style="color: rgba(219, 224, 232, 1)"
+                style="background-color: rgba(219, 224, 232, 1); border: 0.5px solid rgba(219, 224, 232, 1) ;"
               />
               <div id="toggle-elementsPref" class="dropdownElements">
                 <p class="dropdownItems">Product Focus</p>
@@ -134,10 +134,11 @@
             placeholder="Search by account name or website"
           />
 
-          <div id="bell-div">
-            <img id="bell" src="images/bell.png" alt="bell" />
+          <div style="position: relative;">
+            <img src="images/bell.png" alt="bell" />
+            <img style="position: absolute; top: -5px;" src="images/circle.png" alt="circle">
           </div>
-          <img id="harrow" src="images/harrow.png" alt="harrow" />
+          <img src="images/harrow.png" alt="harrow" />
         </div>
         <!-- END OF SEARCH -->
 

@@ -35,6 +35,12 @@ aside > img {
   vertical-align: middle;
 }
 
+#dash{
+  font-weight: bold;
+  margin-left: 0.6rem;
+}
+
+
 /* SIDEBAR TEXT */
 aside > span {
   font-weight: 900;
@@ -66,6 +72,7 @@ aside > div div span {
   margin-left: 1rem;
   vertical-align: middle;
 }
+
 
 /* SIDEBAR ELE */
 #unread {
