@@ -1,0 +1,625 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+}
+/* ---------------------------------------------------- */
+/* CONTAINER */
+/* ---------------------------------------------------- */
+
+/* MAIN CONTAINER */
+main {
+  display: flex;
+}
+
+/* ---------------------------------------------------- */
+/* SIDEBAR */
+/* ---------------------------------------------------- */
+
+/* SIDEBAR */
+main aside {
+  width: 17%;
+  height: 100%;
+  z-index: 2;
+  background-color: white;
+  position: fixed;
+  box-shadow: 4px 0px 16px 10px rgba(30, 30, 30, 0.08);
+  padding: 1.2rem 1.2rem;
+}
+
+/* SIDEBAR LOGO */
+aside > img {
+  height: 2rem;
+  vertical-align: middle;
+}
+
+/* SIDEBAR TEXT */
+aside > span {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+
+/* SIDEBAR NAVITEMS */
+aside > div {
+  margin-top: 2.6rem;
+}
+
+/* NAVITEMS DIV */
+aside > div div {
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+/* SIDEBAR ELEMENT ICONS */
+aside > div div img {
+  height: 1rem;
+  vertical-align: middle;
+}
+
+/* SIDEBAR ELEMENT TEXT */
+aside > div div span {
+  font-weight: 500;
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+
+/* SIDEBAR ELE */
+#unread {
+  margin-left: 4.9rem;
+  background-color: rgba(255, 116, 116, 1);
+  color: white;
+  padding: 0.1rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+
+#unseen {
+  margin-left: 4.6rem;
+  background-color: rgba(255, 116, 116, 1);
+  color: white;
+  padding: 0.1rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+
+#nav-dropAcc {
+  height: 0.6rem;
+  margin-left: 5rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#nav-dropPref {
+  height: 0.6rem;
+  margin-left: 3.6rem;
+  vertical-align: middle;
+}
+
+.dropdownBar {
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.dropdown {
+  display: flex;
+  margin-top: 0.1rem;
+  margin-left: 0.3rem;
+}
+
+.dropdownElements {
+  display: block;
+  margin-left: 1.7rem;
+  margin-top: 0.2rem;
+}
+
+.dropdownItems {
+  font-size: 0.9rem;
+  margin: 0.8rem 0rem;
+  font-weight: 400;
+  color: grey;
+}
+/* ---------------------------------------------------- */
+/* MAIN-CONTENT */
+/* ---------------------------------------------------- */
+main > div {
+  position: absolute;
+  left: 16rem;
+}
+
+/* SEARCH DIV */
+#search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: 4px 0px 16px 10px rgba(30, 30, 30, 0.08);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* SEARCH LEFT IMAGE */
+#search-img {
+  height: 1.2rem;
+  margin-right: 1.5rem;
+}
+
+/* SEARCH INPUT */
+#search-input {
+  border: none;
+  font-size: 0.9rem;
+  width: 75%;
+}
+
+/* SEARCH INPUT ON FOCUS */
+#search-input:focus {
+  outline: none;
+  font-weight: 900;
+}
+
+/* SEARCH INPUT PLACEHOLDER */
+#search-input::placeholder {
+  color: grey;
+  font-weight: 400;
+}
+
+/* SEARCH INPUT ON FOCUS PLACEHOLDER */
+#search-input:focus::placeholder {
+  color: grey;
+  opacity: 0.2;
+}
+
+/* SEARCH NOTIF DIV */
+#search div{
+  padding: 0.4rem 0.7rem;
+  background-color: rgba(239, 243, 249, 1);
+  border-radius: 0.1rem;
+}
+
+/* SEARCH NOTIF IMAGE */
+#search div img {
+  height: 0.9rem;
+}
+
+/* SEARCH HARROW IMAGE */
+#search-img ~ img{
+  height: 2.1rem;
+  margin-left: 0.5rem;
+}
+
+/* BANNERS DIV */
+#banners {
+  display: block;
+  position: relative;
+  top: 4.2rem;
+  z-index: 0;
+}
+
+/* BANNERS IMAGE */
+#banners img {
+  width: 100%;
+}
+
+/* ---------------------------------------------------- */
+/* SEARCH RESULTS*/
+/* ---------------------------------------------------- */
+
+#search-results {
+  display: none;
+  position: relative;
+  top: 7rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+/* SEARCH RESULTS DIV*/
+#search-results > div {
+  flex: 3;
+}
+
+/* SEARCH RESULTS HEADING */
+.results-headings {
+  font-size: 1.4rem;
+  color: black;
+  opacity: 0.5;
+  font-weight: 900;
+}
+
+/* SEARCH RESULTS GRID */
+#similar-grid {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 6rem;
+}
+
+/* SEARCH RESULT DIV */
+#similar-elements {
+  display: flex;
+  margin: 1rem 0rem;
+  vertical-align: middle;
+}
+
+
+/* SEARCH RESULT IMAGE */
+#similar-img {
+  height: 3.5rem;
+  
+}
+
+
+/* SEARCH RESULT TITLE & WEBSITE DIV */
+#similar-nested {
+  margin-left: 1.5rem;
+  align-self: center;
+  width: 15rem;
+}
+
+/* SEARCH RESULT TITLE */
+#similar-title {
+  font-weight: 900;
+  color: black;
+}
+
+/* SEARCH RESULT WEBSITE */
+#similar-website {
+  margin-top: 0.1rem;
+  font-size: 0.8rem;
+  color: black;
+  opacity: 0.6;
+}
+
+/* SEARCH RESULT BUTTON */
+#similar-button {
+  cursor: pointer;
+  align-self: center;
+  padding: 0.25rem 0.9rem;
+  background-color: white;
+  border: 1.5px solid rgba(255, 96, 89, 1);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 96, 89, 1);
+  border-radius: 0.13rem;
+}
+
+/* QUICK ACTION DIV */
+#quick-actions {
+  flex: 1;
+  margin-left: 8rem;
+  vertical-align: middle;
+}
+
+/* QUICK ACTION PARAS */
+#quick-actions p {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 2rem 0rem;
+}
+
+/* MEDIA QUERY */
+
+
+
+/* @media screen and (min-width: 1300px) and (max-width: 1399px) {
+  main aside {
+    width: 10%;
+    padding: 1rem 0.6rem;
+  }
+  aside > img {
+    height: 1.3rem;
+  }
+  aside > span {
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+  }
+  aside > div {
+    margin-top: 1.5rem;
+  }
+  aside > div div {
+    margin-top: 0.6rem;
+  }
+  aside > div div img {
+    height: 0.6rem;
+  }
+  aside > div div span {
+    font-size: 0.6rem;
+    margin-left: 0.35rem;
+  }
+  #unread {
+    margin-left: 1.6rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.3rem;
+  }
+  #unseen {
+    margin-left: 1.4rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.3rem;
+  }
+
+  #nav-dropAcc {
+    height: 0.26rem;
+    margin-left: 1.5rem;
+  }
+
+  #nav-dropPref {
+    height: 0.26rem;
+    margin-left: 0.8rem;
+  }
+
+  .dropdownBar {
+    margin-top: 0.6rem;
+  }
+
+  .dropdown {
+    margin-left: 0.3rem;
+  }
+
+  .dropdownElements {
+    margin-left: 0.7rem;
+    margin-top: 0.2rem;
+  }
+
+  .dropdownItems {
+    font-size: 0.5rem;
+    margin: 0.8rem 0rem;
+  }
+
+  main > div {
+    position: absolute;
+    left: 7.4rem;
+  }
+
+  #search {
+    padding: 0.8rem 1rem;
+  }
+
+  #search-img {
+    height: 0.9rem;
+    margin-right: 0.7rem;
+    margin-left: 1rem;
+  }
+
+  #search-input {
+    width: 78%;
+    font-size: 0.6rem;
+  }
+
+  #search-input::placeholder {
+    font-size: 0.5rem;
+  }
+
+  #search div {
+    padding: 0.07rem 0.5rem;
+  }
+
+  #search div img {
+    height: 0.6rem;
+  }
+
+  #search-img ~ img {
+    height: 1.3rem;
+    margin-left: 0.5rem;
+  }
+
+  #banners {
+    top: 3.2rem;
+  }
+
+  #search-results {
+    top: 5rem;
+    margin-left: 2rem;
+    margin-right: 3rem;
+  }
+
+  .results-headings {
+    font-size: 0.8rem;
+  }
+
+  #similar-grid {
+    margin-top: 0.3rem;
+    column-gap: 5rem;
+  }
+
+  #similar-elements {
+    margin: 0.7rem 0rem;
+  }
+
+  #similar-img {
+    height: 2rem;
+  }
+
+  #similar-nested {
+    margin-left: 1rem;
+    width: 10rem;
+  }
+
+  #similar-title {
+    font-size: 0.55rem;
+  }
+
+  #similar-website {
+    font-size: 0.42rem;
+    color: black;
+  }
+
+  #similar-button {
+    padding: 0.2rem 0.8rem;
+    font-size: 0.4rem;
+  }
+
+  #quick-actions {
+    margin-left: 5rem;
+  }
+
+  #quick-actions p {
+    font-size: 0.6rem;
+    margin: 1.5rem 0rem;
+  }
+} */
+
+@media screen and (min-width: 1400px) and (max-width: 1489px) {
+  main aside {
+    width: 13%;
+    padding: 1rem 0.8rem;
+  }
+  aside > img {
+    height: 1.7rem;
+  }
+  aside > span {
+    font-size: 1.1rem;
+    margin-left: 0.7rem;
+  }
+  aside > div {
+    margin-top: 2.1rem;
+  }
+  aside > div div {
+    margin-top: 1rem;
+  }
+  aside > div div img {
+    height: 0.8rem;
+  }
+  aside > div div span {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+
+  #unread {
+    margin-left: 3.2rem;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.4rem;
+  }
+
+  #unseen {
+    margin-left: 2.9rem;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.4rem;
+  }
+
+  #nav-dropAcc {
+    height: 0.4rem;
+    margin-left: 3.2rem;
+  }
+
+  #nav-dropPref {
+    height: 0.4rem;
+    margin-left: 2.2rem;
+  }
+
+  .dropdownBar {
+    margin-top: 0.6rem;
+  }
+
+  .dropdown {
+    margin-top: 0.1rem;
+    margin-left: 0.3rem;
+  }
+
+  .dropdownElements {
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+  }
+
+  .dropdownItems {
+    font-size: 0.65rem;
+    margin: 0.8rem 0rem;
+  }
+
+  main > div {
+    position: absolute;
+    left: 11.25rem;
+  }
+
+  #search {
+    padding: 1rem 1rem;
+  }
+
+  #search-img {
+    height: 1rem;
+    margin-right: 0.7rem;
+    margin-left: 1rem; 
+  }
+
+  #search-input {
+    width: 76%;
+    font-size: 0.9rem;
+  }
+
+  #search-input::placeholder {
+    font-size: 0.7rem;
+  }
+
+  #search div {
+    padding: 0.2rem 0.5rem;
+  }
+
+  #search div img {
+    height: 0.7rem;
+  }
+
+  #search-img ~ img {
+    height: 1.7rem;
+    margin-left: 0.5rem;
+  }
+
+  #banners {
+    top: 3.3rem;
+  }
+
+  #search-results {
+    top: 6rem;
+    margin-left: 3rem;
+    margin-right: 4rem;
+  }
+
+  .results-headings {
+    font-size: 1rem;
+  }
+
+  #similar-grid {
+    margin-top: 0.3rem;
+    column-gap: 6rem;
+  }
+
+  #similar-elements {
+    margin: 0.8rem 0rem;
+  }
+
+  #similar-img {
+    height: 2.8rem;
+  }
+
+  #similar-nested {
+    margin-left: 1.5rem;
+    width: 12rem;
+  }
+
+  #similar-title {
+    font-size: 0.7rem;
+  }
+
+  #similar-website {
+    font-size: 0.6rem;
+    color: black;
+  }
+
+  #similar-button {
+    padding: 0.2rem 0.8rem;
+    font-size: 0.6rem;
+  }
+
+  #quick-actions {
+    margin-left: 6rem;
+  }
+
+  #quick-actions p {
+    font-size: 0.7rem;
+    margin: 1.5rem 0rem;
+  }
+}

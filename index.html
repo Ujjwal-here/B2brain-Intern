@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B2Brain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+  </head>
+
+  <body>
+    <!-- START OF MAIN -->
+    <main>
+      <!-- START OF SIDEBAR -->
+      <aside>
+        <!-- START OF SIDEBAR LOGO & TEXT -->
+        <img src="images/B2Brain.png" alt="logo" />
+        <span>B2Brain</span>
+        <!-- END OF SIDEBAR LOGO & TEXT -->
+
+        <!-- START OF SIDEBAR NAV ITEMS  -->
+        <div>
+          <!-- START OF DASHBOARD -->
+          <div>
+            <img src="images/home.png" alt="dashboard" />
+            <span>Dashboard</span>
+          </div>
+          <!-- END OF DASHBOARD -->
+
+          <!-- START OF INTELS-->
+          <div>
+            <img src="images/star.png" alt="intels" /><span>Intels</span>
+            <span id="unread">4 unread</span>
+          </div>
+          <!-- END OF INTELS-->
+
+          <!-- START OF LEADS -->
+          <div>
+            <img src="images/user.png" alt="leads" />
+            <span>Leads</span>
+            <span id="unseen">4 unseen</span>
+          </div>
+          <!-- END OF LEADS -->
+
+          <!-- START OF ACCOUNTS -->
+          <div>
+            <img src="images/building.png" alt="accounts" />
+            <span>Accounts</span>
+            <img
+              id="nav-dropAcc"
+              src="images/chevron-down.png"
+              alt="downarrow"
+            />
+            <div class="dropdown">
+              <hr
+                id="toggle-barAcc"
+                class="dropdownBar"
+                style="color: rgba(219, 224, 232, 1)"
+              />
+              <div id="toggle-elementsAcc" class="dropdownElements">
+                <p class="dropdownItems">Manage All</p>
+                <p class="dropdownItems">Track new accounts</p>
+                <p class="dropdownItems">Bulk Import</p>
+              </div>
+            </div>
+          </div>
+          <!-- END OF ACCOUNTS-->
+
+          <!-- START OF PREFERENCES-->
+          <div>
+            <img src="images/building.png" alt="home" />
+            <span>Preferences</span>
+            <img
+              id="nav-dropPref"
+              src="images/chevron-down.png"
+              alt="downarrow"
+            />
+            <div class="dropdown">
+              <hr
+                id="toggle-barPref"
+                class="dropdownBar"
+                style="color: rgba(219, 224, 232, 1)"
+              />
+              <div id="toggle-elementsPref" class="dropdownElements">
+                <p class="dropdownItems">Product Focus</p>
+                <p class="dropdownItems">Intel Preferences</p>
+                <p class="dropdownItems">Lead Persona</p>
+              </div>
+            </div>
+          </div>
+          <!-- END OF PREFERENCES-->
+
+          <!-- START OF INTEGRATIONS-->
+          <div>
+            <img src="images/link.png" alt="Integrations" />
+            <span>Integrations</span>
+          </div>
+          <!-- END OF INTEGRATIONS -->
+
+          <!-- START OF TEAMS -->
+          <div>
+            <img id="navIcon-teams" src="images/users.png" alt="teams" />
+            <span>Teams</span>
+          </div>
+          <!-- END OF TEAMS -->
+
+          <!-- START OF HELP -->
+          <div>
+            <img src="images/comments-alt.png" alt="help" />
+            <span> Help/Support</span>
+          </div>
+          <!-- END OF HELP -->
+        </div>
+        <!-- END OF SIDEBAR NAV ITEMS  -->
+      </aside>
+
+      <!-- END OF SIDEBAR -->
+
+      <!-- START OF MAIN CONTENT -->
+      <div>
+        <!-- START OF SEARCH -->
+        <div id="search">
+          <img id="search-img" src="images/search.png" alt="search" />
+          <input
+            id="search-input"
+            type="text"
+            name="search"
+            placeholder="Search by account name or website"
+          />
+
+          <div id="bell-div">
+            <img id="bell" src="images/bell.png" alt="bell" />
+          </div>
+          <img id="harrow" src="images/harrow.png" alt="harrow" />
+        </div>
+        <!-- END OF SEARCH -->
+
+        <!-- START OF BANNERS -->
+        <div id="banners">
+          <img id="hero-image" src="images/hero-image.png" alt="hero-image" />
+          <img id="companies" src="images/companies.png" alt="companies" />
+          <img id="customers" src="images/customers.png" alt="customers" />
+        </div>
+        <!-- END OF BANNERS -->
+
+        <!-- START OF SEARCH RESULTS -->
+        <div id="search-results">
+          <div>
+            <p class="results-headings">Similar accounts</p>
+            <div id="similar-grid"></div>
+          </div>
+          <section id="quick-actions">
+            <h1 class="results-headings">Quick Actions</h1>
+            <p>Track new account</p>
+            <p>Build track accounts</p>
+            <p>Manage accounts</p>
+          </section>
+        </div>
+        <!-- END OF SEARCH RESULTS -->
+      </div>
+      <!-- END OF MAIN CONTENT -->
+    </main>
+    <!-- END OF MAIN -->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
