@@ -36,9 +36,9 @@ search.addEventListener("focus", function () {
   search_image.style.height = "1.2rem";
 });
 
-search.addEventListener("focusout", function () {
-  search_image.src = "images/search.png";
-});
+// search.addEventListener("focusout", function () {
+//   search_image.src = "images/search.png";
+// });
 
 search.addEventListener("input", function () {
   document.getElementById("banners").style.display = "none";
@@ -57,6 +57,14 @@ search.addEventListener("input", function () {
 // search.addEventListener("focusout", function () {
 //   document.getElementById("search-results").style.display = "none";
 // });
+
+search_image.addEventListener("click",function(){
+  if (search_image.src.indexOf("images/times.png") != -1) {
+    search.value=""
+    search_image.src="images/search.png"
+    document.getElementById("banners").style.display = "block";
+  }
+})
 
 async function fetchData(query) {
   const response = await fetch(
