@@ -44,11 +44,7 @@ search.addEventListener("input", function () {
   document.getElementById("banners").style.display = "none";
 });
 
-if (search_image.src === "images/times.png") {
-  search_image.addEventListener("click", function () {
-    search.value = "";
-  });
-}
+
 
 search.addEventListener("input", function () {
   document.getElementById("search-results").style.display = "flex";
@@ -74,6 +70,7 @@ async function fetchData(query) {
     }
   );
   const data = await response.json();
+  
   const elements = data
     .map((value, index) => {
       const elements = `
@@ -112,7 +109,10 @@ async function fetchData(query) {
       return elements;
     })
     .join("");
+  document.getElementById("search-results").style.display="flex"
   document.getElementById("similar-grid").innerHTML = elements;
+
+  
 
   const track = document.querySelectorAll("#similar-button");
   track.forEach((value, index) => {
@@ -137,5 +137,6 @@ async function fetchData(query) {
 
 search.addEventListener("input", function (e) {
   let query = e.target.value;
+  document.getElementById("search-results").style.display="none"
   fetchData(query);
 });
