@@ -66,7 +66,6 @@ async function fetchData(query) {
     }
   );
   const data = await response.json();
-  console.log(data);
   const elements = data
     .map((value, index) => {
       const elements = `
@@ -106,6 +105,7 @@ async function fetchData(query) {
     })
     .join("");
   document.getElementById("similar-grid").innerHTML = elements;
+
   const track = document.querySelectorAll("#similar-button");
   track.forEach((value, index) => {
     value.addEventListener("click", function () {
